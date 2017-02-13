@@ -1,5 +1,6 @@
+sum of 3 no's
 #include <stdio.h>
-#include<math.h>
+
 int add(int a ,int b,int c)
     {
     
@@ -18,7 +19,7 @@ int main()
     return 0;
 }
 
-
+sum to  2 no's.
 #include <stdio.h>
 
 int add(int a,int b)
@@ -55,5 +56,27 @@ typedef struct
     printf("result:%f+i.%f\n",r3.real,r3.imag);
     return (0);
 }
-          
-    
+ sum of 3 complex no's.         
+#include<stdio.h>
+typedef struct
+{
+    float real;
+    float imag;
+}complex;
+ complex add(complex r1,complex r2,complex r3)
+{
+    complex res;
+    res.real=r1.real+r2.real+r3.real;
+    res.imag=r1.imag+r2.imag+r3.imag;
+    return res;
+}
+ int main()
+{
+    complex r1={4,6};
+    complex r2={3,8};
+    complex r3={6,9};
+    complex r4=add(r1,r2,r3);
+    printf("result:%f+i.%f\n",r4.real,r4.imag);
+    return (0);
+ }
+        
