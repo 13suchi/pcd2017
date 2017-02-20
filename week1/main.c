@@ -80,3 +80,23 @@ typedef struct
     return (0);
  }
         
+sum of n no's.
+#include <stdio.h>
+
+ int add(int a[],int n)
+ {
+     int sum=0;
+for (int i=0;i<n;i++)
+{
+    sum+=a[i];
+}
+return sum;
+}
+int main()
+{
+    int n=10;
+    int a[10]={1,2,3,4,5,6,7,8,9,0};
+    int res=add(a,n);
+    printf("result is:%d\n",res);
+    return 0;
+}
