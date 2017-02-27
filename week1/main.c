@@ -1,6 +1,6 @@
 sum to  2 no's.
-#include <stdio.h>
 
+#include <stdio.h>
 int add(int a,int b)
 {
     return a+b;
