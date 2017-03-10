@@ -7,8 +7,8 @@ int reverse(int x)
  while(x>0)
  {
   rem=x%10;
-  reverse=reverse*10+rem;
-  x=x%10;
+  reverse=(reverse*10)+rem;
+  x=x/10;
  }
  return reverse;
 }
@@ -95,3 +95,39 @@ else
    return -1;
   }
 }
+#include<stdio.h>
+#include<math.h>
+float convert_radians(float d)
+{
+	float rad;
+	rad=(3.1412/180)*d;
+	return rad;
+}
+float compute(float x)
+{
+	float term,sum,diff,prev;
+	int i;
+	term=sum=diff=x;
+	for(i=3;diff>0.000001;i=i+2)
+	{
+		prev=term;
+		term=(-term*x*x)/(i*(i-1));
+		diff=fabs(prev-term);
+		sum=sum+term;
+	}
+	return sum;
+}
+int main()
+{
+	float degree,x,sum,res;
+	sum=0;
+	res=0;
+	printf("enter the degree\n");
+	scanf("%f",&degree);
+	x=convert_radians(degree);
+	sum=compute(sin(x));
+	printf("sin(%f)=%f",degree,sum);
+	res=sinf(x);
+	printf("comparing res and sinf%f",res);
+}
+	
