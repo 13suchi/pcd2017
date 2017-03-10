@@ -125,8 +125,8 @@ int main()
 	printf("enter the degree\n");
 	scanf("%f",&degree);
 	x=convert_radians(degree);
-	sum=compute(sin(x));
-	printf("sin(%f)=%f",degree,sum);
+	sum=compute(x);
+	printf("sin(%f)=%f",sin(x),sum);
 	res=sinf(x);
 	printf("comparing res and sinf%f",res);
 }
